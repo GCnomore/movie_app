@@ -1,20 +1,26 @@
-.Home, .About, p{
-    margin-right: 20px;
-    font-size: 20px;
-    align-items: center;
-    justify-content: center;
-    display: flex;
+.Home,
+.About {
+  margin-right: 20px;
+  font-size: 20px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  font-weight: 600;
 }
 
-.Navigation p{
-    display: flex;
-    padding: 0;
-    margin: 0;
-    align-items: center;
-    justify-content: center;
+.Home:hover,
+.About:hover {
+  opacity: 0.5;
+}
+
+.Navigation p {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
 }
 
 #root {
-    display: inline;
+  display: inline;
 }
-

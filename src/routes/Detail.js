@@ -1,20 +1,27 @@
-import React from "react";
-import "../component/Navigation.css";
+import React from 'react';
+import '../component/Navigation.css';
 
-class Detail extends React.Component{
-    componentDidMount () {
-        const { location, history } = this.props;
-        if (location.state === undefined){
-            history.push("/");
-        }
-    }
-
-    render () {
-        return (
-            <span>Hello</span>
-            );
-    }
-
+function Detail({
+  title,
+  year,
+  genres,
+  rating,
+  runtime,
+  mpa_rating,
+  summary,
+  poster,
+}) {
+  console.log(
+    title,
+    year,
+    genres,
+    rating,
+    runtime,
+    mpa_rating,
+    summary,
+    poster
+  );
+  return <span>Hello</span>;
 }
 
 export default Detail;

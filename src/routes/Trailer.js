@@ -1,23 +1,12 @@
-import React from "react";
+import React from 'react';
 
-
-function Trailer (props) {
-    console.log(props);
-    return(
-        <div>
-        <h1>
-            {props.title}
-        </h1>
-        <Poster img={props.poster} />
-        </div>
-    )
+function Trailer(props) {
+  console.log(props.location.state.props);
+  return (
+    <div>
+      <h1>Redirecting</h1>;
+    </div>
+  );
 }
-
-function Poster (poster) {
-    return (
-        <img src={poster.img} alt="poster"/>
-    )
-}
-
 
 export default Trailer;
