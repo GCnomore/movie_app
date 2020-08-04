@@ -1,0 +1,49 @@
+:root {
+  --lightOpacity: 0.6;
+  --detailSize: 17px;
+  --detailWeight: 600;
+}
+
+#detail_container {
+  display: inline-block;
+  text-align: center;
+}
+
+#detail_movieInfo {
+  list-style: none;
+  padding: 0;
+}
+
+#detail_movieTitle {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+#detail_movieYear,
+#detail_movieMPA,
+#detail_movieRuntime,
+#detail_movieGenres,
+#detail_movieRating {
+  opacity: var(--lightOpacity);
+  font-size: var(--detailSize);
+  font-weight: var(--detailWeight);
+}
+
+#detail_ratingImg {
+  height: 20px;
+}
+
+#detail_movieSummary {
+  padding: 0px 30%;
+  text-align: left;
+}
+
+#detail_movieSummary > h2 {
+  font-size: 20px;
+}
+
+@media screen and (min-width: 150px) and (max-width: 1200px) and (orientation: portrait) {
+  #detail_movieSummary {
+    padding: 0px 5%;
+  }
+}

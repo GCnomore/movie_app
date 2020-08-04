@@ -51,7 +51,7 @@ function Movie({
           <img
             alt='img'
             className='ratingImg'
-            src='https://yts.mx/assets/images/website/logo-imdb.svg'
+            src='https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/IMDB_Logo_2016.svg/1200px-IMDB_Logo_2016.svg.png'
           />{' '}
           {rating} out of 10
         </h5>
@@ -66,6 +66,17 @@ function Movie({
           <Link
             to={{
               pathname: '/movie-detail',
+              state: {
+                title: title,
+                year: year,
+                genres: genres,
+                rating: rating,
+                runtime: runtime,
+                mpa_rating: mpa_rating,
+                summary: summary,
+                poster: poster,
+                trailer: trailer,
+              },
             }}>
             {summary.slice(0, 200)}...
           </Link>
