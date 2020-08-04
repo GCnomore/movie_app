@@ -3,7 +3,6 @@ import { HashRouter, Route } from 'react-router-dom';
 import About from './routes/About';
 import Home from './routes/Home';
 import Navigation from './component/Navigation';
-import Detail from './routes/Detail';
 import Trailer from './routes/Trailer';
 import './routes/Home.css';
 
@@ -70,7 +69,6 @@ class App extends React.Component {
         <Navigation />
         <Route path='/' exact={true} component={Home} />
         <Route path='/about' exact={true} component={About} />
-        <Route path='/movie-detail' exact={true} component={Detail} />
         <Route path='/trailer' exact={true} component={Trailer} />
       </HashRouter>
     );

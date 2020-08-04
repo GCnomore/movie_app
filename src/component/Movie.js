@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Trailer from '../routes/Trailer';
 import { Link } from 'react-router-dom';
 import '../routes/Home.css';
 
@@ -67,16 +66,6 @@ function Movie({
           <Link
             to={{
               pathname: '/movie-detail',
-              state: {
-                title,
-                year,
-                genres,
-                rating,
-                runtime,
-                mpa_rating,
-                summary,
-                poster,
-              },
             }}>
             {summary.slice(0, 200)}...
           </Link>
