@@ -1,4 +1,5 @@
 import React from 'react';
+import Navigation from '../component/Navigation';
 import './Detail.css';
 
 class Detail extends React.Component {
@@ -15,6 +16,7 @@ class Detail extends React.Component {
     if (movie) {
       return (
         <div id='detail_container'>
+          <Navigation />
           <div id='detail_moviePoster'>
             <img alt={movie.title} src={movie.poster} />
           </div>

@@ -9,6 +9,10 @@
   text-align: center;
 }
 
+#detail_moviePoster {
+  padding: 10px 0 0 0;
+}
+
 #detail_movieInfo {
   list-style: none;
   padding: 0;

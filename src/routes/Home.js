@@ -78,21 +78,21 @@ class Home extends React.Component {
     }
     return (
       <section className='container'>
-        <div className='container movie_container'>
-          <Navigation />
-          <div>
-            <form>
-              <label>
-                Sort by:
-                <select onChange={this.handleSelect}>
-                  <option defaultValue='sortBy'></option>
-                  <option value='rating'>rating</option>
-                  <option value='year'>year</option>
-                  <option value='date_added'>date added</option>
-                </select>
-              </label>
-            </form>
-          </div>
+        <Navigation />
+        <div className='sortMenu'>
+          <form>
+            <label>
+              Sort by:
+              <select onChange={this.handleSelect}>
+                <option defaultValue='sortBy'></option>
+                <option value='rating'>rating</option>
+                <option value='year'>year</option>
+                <option value='date_added'>date added</option>
+              </select>
+            </label>
+          </form>
+        </div>
+        <div className='movie_container'>
           {isLoading ? (
             <div className='loader'>
               <span className='loader__text'>Loading...</span>
@@ -100,7 +100,7 @@ class Home extends React.Component {
           ) : (
             <div className='movies'>
               {movies.map((movie) => (
-                <div onClick={selTrailer}>
+                <div className='movie_box' onClick={selTrailer}>
                   <Movie
                     key={movie.id}
                     id={movie.id}

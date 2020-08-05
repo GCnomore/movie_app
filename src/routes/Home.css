@@ -6,12 +6,10 @@ body {
   height: 100%;
   background-color: #f2f7f5;
   margin: 0;
-  padding: 0;
 }
 
 html,
 body,
-.container,
 #root {
   height: 100%;
   display: flex;
@@ -24,15 +22,14 @@ a {
   color: black;
 }
 
-.container {
-  margin-top: 20px;
+.sortMenu {
+  font-weight: 600;
+  padding-left: 5px;
 }
 
 .loader {
   width: 100%;
   height: 100%;
-  display: flex;
-  justify-content: center;
   align-items: center;
   font-size: 60px;
   font-weight: 700;
@@ -42,83 +39,12 @@ a {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding: 50px;
+  padding: 50px 200px;
   width: 100%;
 }
 
-.movies .movies_movie {
+.movie_box {
   width: 45%;
-  height: fit-content;
-  margin-bottom: 70px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  position: relative;
-  padding: 20px;
-  box-shadow: 5px 4px 10px 1px #6d6d6d;
-}
-
-.movies_movie #movie_poster {
-  max-width: 200px;
-  box-shadow: 5px 4px 11px 2px #323232;
-  margin-bottom: 4px;
-  margin-top: -40px;
-  margin-left: -30px;
-  position: relative;
-}
-
-.movie_data {
-  margin-left: 20px;
-}
-
-.movie_title,
-.movie_year,
-.movie_genres,
-.movie_rating,
-.movie_runtime,
-.movie_mpa_rating {
-  margin: 0;
-  padding: 1px;
-}
-
-.movie_year {
-  margin-bottom: 15px;
-}
-
-.movie_title {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.movie_genres {
-  margin-top: 15px;
-  font-size: 20px;
-}
-
-.movie_summary,
-.movie_genres {
-  text-shadow: 0px 0 #323232, 0 0px #323232, 0px 0 #323232, 0 0px #323232;
-  opacity: 0.6;
-  font-size: medium;
-}
-
-.movie_summary:hover {
-  opacity: 0.3;
-}
-
-h5 {
-  opacity: 0.6;
-}
-
-.ratingImg {
-  padding: 0;
-  margin: 0;
-  opacity: 1;
-  height: 20px;
-}
-
-.details_info,
-.details_info > * {
-  display: none;
 }
 
 .hide {
@@ -130,6 +56,9 @@ h5 {
   height: 80%;
   position: fixed;
   top: 5%;
+  z-index: 2;
+  left: 50%;
+  transform: translateX(-50%);
   box-shadow: 5px 4px 10px 1px #6d6d6d;
 }
 
@@ -145,6 +74,9 @@ h5 {
   width: fit-content;
   color: black;
   background-color: white;
+  z-index: 2;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .modal_background {
@@ -153,33 +85,8 @@ h5 {
   opacity: 0.2;
 }
 
-@media screen and (min-width: 320px) and (max-width: 667px) {
-  .movies_movie {
-    width: 100%;
-  }
-}
-
 @media screen and (min-width: 320px) and (max-width: 667px) and (orientation: portrait) {
-  .movies_movie {
-    width: 100%;
-    flex-direction: column;
-  }
-  #movie_poster {
-    top: 0;
-    left: 0;
-    width: 100%;
-  }
-  .movies_movie {
-    width: 100% !important;
-  }
   .movies {
     padding: 6%;
-  }
-  .movie_summary,
-  .movie_genres {
-    font-size: medium;
-  }
-  .movie_title {
-    font-size: x-large;
   }
 }
