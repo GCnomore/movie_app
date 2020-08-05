@@ -39,11 +39,17 @@ function Movie({
   } else {
     timeMin = `${runTime.time}hr ${runTime.min}min`;
   }
+
   return (
     <div className='movies_movie'>
-      <Link to={{ pathname: '/trailer', state: { props: trailer } }}>
-        <img className='movie_poster' src={poster} alt={title} title={title} />
-      </Link>
+      <img
+        id='movie_poster'
+        className={trailer}
+        src={poster}
+        alt={title}
+        title={title}
+      />
+
       <div className='movie_data'>
         <h3 className='movie_title'>{title}</h3>
         <h5 className='movie_year'>{year}</h5>
@@ -67,15 +73,15 @@ function Movie({
             to={{
               pathname: '/movie-detail',
               state: {
-                title: title,
-                year: year,
-                genres: genres,
-                rating: rating,
-                runtime: runtime,
-                mpa_rating: mpa_rating,
-                summary: summary,
-                poster: poster,
-                trailer: trailer,
+                title,
+                year,
+                genres,
+                rating,
+                runtime,
+                mpa_rating,
+                summary,
+                poster,
+                trailer,
               },
             }}>
             {summary.slice(0, 200)}...

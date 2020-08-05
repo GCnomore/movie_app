@@ -4,7 +4,7 @@
 
 body {
   height: 100%;
-  background-color: #e6e6e6;
+  background-color: #f2f7f5;
   margin: 0;
   padding: 0;
 }
@@ -49,7 +49,6 @@ a {
 .movies .movies_movie {
   width: 45%;
   height: fit-content;
-  background-color: white;
   margin-bottom: 70px;
   display: flex;
   justify-content: space-between;
@@ -59,7 +58,7 @@ a {
   box-shadow: 5px 4px 10px 1px #6d6d6d;
 }
 
-.movies_movie .movie_poster {
+.movies_movie #movie_poster {
   max-width: 200px;
   box-shadow: 5px 4px 11px 2px #323232;
   margin-bottom: 4px;
@@ -122,6 +121,38 @@ h5 {
   display: none;
 }
 
+.hide {
+  display: none;
+}
+
+.trailerModal {
+  width: 60%;
+  height: 80%;
+  position: fixed;
+  top: 5%;
+  box-shadow: 5px 4px 10px 1px #6d6d6d;
+}
+
+.noTrailer {
+  position: fixed;
+  top: 5%;
+  box-shadow: 5px 4px 10px 1px #6d6d6d;
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+  padding: 15%;
+  height: fit-content;
+  width: fit-content;
+  color: black;
+  background-color: white;
+}
+
+.modal_background {
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+}
+
 @media screen and (min-width: 320px) and (max-width: 667px) {
   .movies_movie {
     width: 100%;
@@ -133,7 +164,7 @@ h5 {
     width: 100%;
     flex-direction: column;
   }
-  .movie_poster {
+  #movie_poster {
     top: 0;
     left: 0;
     width: 100%;
